@@ -8,8 +8,8 @@ router.post('/filmes', controller.addFilme)
 
 router.get('/filmes/:id', controller.getFilmesById)
 
-router.put('/fimes/:id', controller.updateFilme)
+router.put('/filmes/:id', controller.updateFilme)   
 
-router.delete('/fimes/:id', controller.deleteFilme)
+router.delete('/filmes/:id', controller.deleteFilme)
 
 module.exports = router;

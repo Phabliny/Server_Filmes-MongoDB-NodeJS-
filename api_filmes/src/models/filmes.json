@@ -1,7 +1,7 @@
 [
     {
         "Title":"10 Things I Hate About You",
-        "Year":"1999",
+        "Year": 1999,
         "Rated":"PG-13",
         "Released":"31 Mar 1999",
         "Runtime":"97 min",
@@ -16,7 +16,7 @@
     },
     {
         "Title": "Avatar",
-        "Year": "2009",
+        "Year": 2009,
         "Rated": "PG-13",
         "Released": "18 Dec 2009",
         "Runtime": "162 min",
@@ -31,7 +31,7 @@
     },
     {
         "Title":"Inception",
-        "Year":"2010",
+        "Year":2010,
         "Rated":"PG-13",
         "Released":"16 Jul 2010",
         "Runtime":"148 min",
@@ -46,7 +46,7 @@
     },
     {
         "Title":"Doctor Strange",
-        "Year":"2016",
+        "Year":2016,
         "Rated":"PG-13",
         "Released":"04 Nov 2016",
         "Runtime":"115 min",
@@ -61,7 +61,7 @@
     },
     {
         "Title":"The Truman Show",
-        "Year":"1998",
+        "Year": 1998,
         "Rated":"PG",
         "Released":"05 Jun 1998",
         "Runtime":"103 min",

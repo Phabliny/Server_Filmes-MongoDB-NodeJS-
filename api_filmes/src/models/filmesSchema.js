@@ -13,11 +13,7 @@ const filmesSchema = new Schema({
     },
     Year:{
         type: Number,
-        required:true
-    },
-    subtitle:{
-        type: String,
-        required: true
+        required:true 
     },
     Rated:{
         type: String,

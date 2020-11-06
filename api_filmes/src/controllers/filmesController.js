@@ -1,5 +1,6 @@
 const filmesTeste = require('../models/filmesSchema')
 
+//getFilmes
 const getFilmes =  (req,res) => {
     console.log(req.url)
     filmesTeste.filmesCollection.find((error, maravilhosa) =>{
@@ -10,7 +11,7 @@ const getFilmes =  (req,res) => {
         }
     })
 }
-//getMaravilhosaById
+//getFilmeById
 const getFilmesById =  (req,res) => {
    const idParam = req.params.id
    filmesTeste.filmesCollection.findById(idParam, (error, filme) =>{
@@ -26,11 +27,11 @@ const getFilmesById =  (req,res) => {
    }) 
 }
 
-//addMaravilhosa 
+//addFilme
 const addFilme = (req,res) => {
     console.log(req.url)
     const filmeBody = req.body
-    const filme = new maravilhosaTeste.filmesCollection(filmeBody)
+    const filme = new filmesTeste.filmesCollection(filmeBody)
 
     filme.save((error) =>{
         if(error){
@@ -38,32 +39,34 @@ const addFilme = (req,res) => {
         } else {
             return res.status(201).send(filme)
         }
-    })
+    }) 
 }
 
-//updateMaravilhosa 
+//updateFilme
 const updateFilme = (req, res) => {
     const idParam = req.params.id
     const filmeBody = req.body
+
     const novo = {new: true} //quando o documento for inserido vai retornar o valor modificado e não o original, que é o que acontece por padrão
 
     filmesTeste.filmesCollection.findByIdAndUpdate(
         idParam,
-        {$set:{filmeBody}}, // adicionei o $set pra mostrar como ficaria, para o caso de não passar valores para todos os atributos novamente.
+        filmeBody, //{$set:{filmeBody}}, // adicionei o $set pra mostrar como ficaria, para o caso de não passar valores para todos os atributos novamente.
         novo,
-        (error, filme) =>{
+        (error, filme) => {
             if(error){
                 return res.status(500).send(error)
             } else if (filme) {
                 return res.status(200).send(filme) 
-            } else{
+            } else {
                 return res.sendStatus(404)
             }
-        }
+        } 
     )    
 }
 
-//deleteMaravilhosa
+
+//deleteFilme
 const deleteFilme = (req, res) => {
     const idParam = req.params.id
     filmesTeste.filmesCollection.findByIdAndDelete(idParam, (error, filme) =>
