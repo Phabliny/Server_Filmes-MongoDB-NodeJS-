@@ -3,11 +3,11 @@ const filmesTeste = require('../models/filmesSchema')
 //getFilmes
 const getFilmes =  (req,res) => {
     console.log(req.url)
-    filmesTeste.filmesCollection.find((error, maravilhosa) =>{
+    filmesTeste.filmesCollection.find((error, filme) =>{
         if(error){
             return res.status(500).send(error)
         } else{
-            return res.status(200).send(maravilhosa)
+            return res.status(200).send(filme)
         }
     })
 }
